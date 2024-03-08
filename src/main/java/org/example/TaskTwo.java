@@ -51,7 +51,7 @@ public class TaskTwo {
         while (true) {
             synchronized (lock) {
                 if (current > n) return;
-                if (current % 3 == 0 || current % 5 == 0) {
+                if (current % 3 == 0 && current % 5 == 0) {
                     System.out.println("fizzBuzz");
                     current++;
                     lock.notifyAll();
